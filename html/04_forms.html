@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form target="_self">
+        <label for="nameInput">Name : </label>
+        <input type="text" placeholder="Suprabhat">
+        <label for="email">Email : </label>
+        <input type="email" name="email" id="emailInp">
+        <label for="password">Passowrd : </label>
+        <input type="password" name="password" id="emailPassword">
+        <div>
+            <label for="employed">Employed</label>
+            <input type="radio" name="employement" id="employedRadio" value="employed">
+            <label for="unemployed">Unemployed</label>
+            <input type="radio" name="employement" id="unemployedRadio" value="unemployed">
+        </div>
+        <div>
+            <label for="science">Science</label>
+            <input type="checkbox" name="interests" id="science">
+            <label for="computers">Computers</label>
+            <input type="checkbox" name="interests" id="computers">
+        </div>
+        <label for="dob">Date of Birth : </label>
+        <input type="date" name="dob" id="dobInput">
+        <label>70%</label>
+        <progress max="100" value="70"></progress>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

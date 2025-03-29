@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Nav Bar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color:beige;
+        }
+        .navlist {
+            display: flex;
+            justify-content: space-around;
+        }
+        .navItem{
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .loginButton {
+            background-color: red;
+        }
+        .navText{
+            color:brown;
+            text-decoration: none;
+            justify-content: space-around;
+            position: relative;
+        }
+        .navText:hover {
+            color: blue;
+        }
+        .navText::after {
+            position: absolute;
+            content: "";
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            background-color: blue;
+            transition: transform 0.3s ease-in-out;
+            transform: scaleX(0);
+            transform-origin: bottom;
+        }
+        .navText:hover::after {
+            transform: scaleX(1);
+        }
+        .navbar1 {
+            text-decoration: none;
+            list-style-type: none;
+            margin: 10px;
+            padding-right: 10px;
+            width:max-content;
+            background-color:green;
+            display: flex;
+        }
+        .navlist1 {
+            margin-left: 20px;
+        }
+        .navItem1{
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .loginButton1 {
+            background-color: darkgreen;
+            width: 100px;
+            height: 30px;
+            margin-right: 10px;
+            cursor: pointer;
+            border: none;
+            color: white;
+        }
+        .navText1{
+            color: white;
+            text-decoration: none;
+            position: relative;
+        }
+        .navText1:hover {
+            color: blue;
+        }
+        .navText1::after {
+            position: absolute;
+            content: "";
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            background-color: blue;
+            transition: transform 0.3s ease-in-out;
+            transform: scaleX(0);
+            transform-origin: bottom;
+        }
+        .navText1:hover::after {
+            transform: scaleX(1);
+        }
+        .navbar2 {
+            text-decoration: none;
+            list-style-type: none;
+            margin: 10px;
+            background-color:skyblue;
+        }
+        .navlist2 {
+            justify-content: space-around;
+            align-items: center;
+            display: flex;
+        }
+        .navItem2{
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .loginButton2 {
+            background-color: rgb(34, 163, 214);
+            width: 100px;
+            height: 30px;
+            cursor: pointer;
+            border: none;
+            color: white;
+        }
+        .navText2{
+            color: white;
+            text-decoration: none;
+            position: relative;
+        }
+        .navText2:hover {
+            color: blue;
+        }
+        .navText2::after {
+            position: absolute;
+            content: "";
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            background-color: blue;
+            transition: transform 0.3s ease-in-out;
+            transform: scaleX(0);
+            transform-origin: bottom;
+        }
+        .navText2:hover::after {
+            transform: scaleX(1);
+        }
+        .dropdown {
+            padding: 10px;
+            list-style-type: none;
+            display: block;
+            position: absolute;
+            background-color: aqua;
+            display: none;
+        }
+        .navItem2:hover .dropdown {
+            display: block;
+        }
+        .navItemChild {
+            margin-top: 10px;
+        }
+        .navItemChild a {
+            text-decoration: none;
+            color: white;
+        }
+        .navItemChild a:hover {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <li class="navlist">
+            <ul class="navItem"><a class="navText" href=".">Home</a></ul>
+            <ul class="navItem"><a class="navText" href=".">About</a></ul>
+            <ul class="navItem"><a class="navText" href=".">Products</a></ul>
+            <ul class="navItem"><button class="loginButton">Login</button></ul>
+        </li>
+    </div>
+    <div class="navbar1">
+        <li class="navlist1">
+            <ul class="navItem1"><a class="navText1" href=".">Home</a></ul>
+            <ul class="navItem1"><a class="navText1" href=".">About</a></ul>
+            <ul class="navItem1"><a class="navText1" href=".">Products</a></ul>
+            <ul class="navItem1"><button class="loginButton1">Login</button></ul>
+        </li>
+    </div>
+    <div class="navbar2">
+        <li class="navlist2">
+            <ul class="navItem2"><a class="navText2" href=".">Home</a></ul>
+            <ul class="navItem2"><a class="navText2" href=".">About</a>
+                <li class="dropdown">
+                    <ul class="navItemChild"><a href="#">Our Products</a></ul>
+                    <ul class="navItemChild"><a href="#">Contact</a></ul>
+                </li>
+            </ul>
+            <ul class="navItem2"><a class="navText2" href=".">Products</a></ul>
+            <ul class="navItem2"><button class="loginButton2">Login</button></ul>
+        </li>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*universal selector affects whole page*/
+        * {
+            margin : 3;
+        }
+        /* type selector affects particular type like a heading */
+        p {
+            color : blue;
+        }
+        /* class selector targets those items having same class */
+        .BoldClass {
+            font: bold;
+        }
+        /* id selector affects particular item having an id, id can be unique only */
+        #smartItem {
+            color : red;
+        }
+        /* attribute selector, affects a type with particular attribute*/
+        [href] {
+            color : green;
+        }
+        /* descedants selector, affects all descedants of a particular type*/
+        article p {
+            font-size: medium;
+            color: aqua;
+        }
+        /* child selector, affects all children of a particular type*/
+        article > p {
+            background-color: bisque;
+        }
+        /* direct sibling selector */
+        h1 + h2 {
+            background-color: aquamarine;
+        }
+        /* general sibling selector */
+        p ~ div {
+            background-color: pink;
+        }
+        /* pseudo class selector */
+        a:hover {
+            color: red;
+        }
+        /* pseudo element selector */
+        p::first-letter {
+            font:bold;
+        }
+        /* group selector */
+        h1, h2, h3 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>    
+</head>
+<body>
+    <h1 class="BoldClass">This is a Heading 1</h1>
+    <h2>This is a Heading 2</h2>
+    <h3 class="BoldClass">This is a Heading 3</h3>
+    <p>This is a paragraph of text. It's a normal paragraph.</p>
+    <p>This is <b>bold</b> text.</p>
+    <p>This is <i>italic</i> text.</p>
+    <p>This is <u href="www.example.com">underlined</u> text.</p>
+    <p>This is <strong>strong</strong> text.</p>
+    <p>This is <em>emphasized</em> text.</p>
+    <p id="smartItem">This is <mark>highlighted</mark> text.</p>
+    <article>
+        <p>This is an article paragraph.</p>
+        <div>
+            <p>This is a nested paragraph.</p>
+        </div>
+        <div>
+            <p>This is another nested paragraph.</p>
+        </div>
+        <p>This is another paragraph in the article.</p>
+    </article>
+    <p>This is <small>small</small> text.</p>
+    <p>This is <sub>subscript</sub> text.</p>
+    <p>This is <sup>superscript</sup> text.</p>
+    <p>This is <del>deleted</del> text.</p>
+</body>
+</html>
